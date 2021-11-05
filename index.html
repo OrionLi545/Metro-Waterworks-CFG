@@ -6,7 +6,7 @@
                 margin: 0%;
             }
             .img{
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 top: 0;
                 z-index: -1;
@@ -21,19 +21,45 @@
             .text{
                 position:absolute;
                 height: 100%;
-                width: 100%;
-                text-align: center;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 font-size: 72px;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-weight: bold;
                 color: white;
                 text-shadow: 2px 2px 5px green;
             }
-            .vertAlign{
-                vertical-align:middle; display:inline-block; height:100%; width:1px; margin-left:-1px;
+            .img2{
+                width: 50%;
+                height: 100%;
+                top: 0;
+                margin-left: 50%;
+                z-index: -1;
+                position: absolute;
+                opacity: 0.35;
             }
-            .textAlign{
-                vertical-align:middle;
+            .img2 img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .text2{
+                position:absolute;
+                height: 100%;
+                width: 50%;
+                margin-left: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 72px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bold;
+                color: white;
+                text-shadow: 2px 2px 5px green;
             }
         </style>
     </head>
@@ -41,9 +67,20 @@
         <div class="img">
             <img src="src/index-bg.jpg">
         </div>
-        <div class="text">
-            <span class="vertAlign"></span>
-            <span class="textSpan">Tap Me to view COOL Details</span>
+        <a href="menu.html"><div class="text">
+            <div>Tap Me to View</div>
+            <div>Cool DETAILS</div>
+            <!-- <span class="textAlign">Tap Me to view<br></span>
+            <span class="textAlign">COOL Details</span> -->
+        </div></a>
+        <div class="img2">
+            <img src="src/index-bg-2.jpg">
+        </div>
+        <div class="text2">
+            <div>Tap Me to View</div>
+            <div>Great VIDEOS</div>
+            <!-- <span class="textAlign">Tap Me to view<br></span>
+            <span class="textAlign">COOL Details</span> -->
         </div>
     </body>
 </html>
