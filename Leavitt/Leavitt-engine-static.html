@@ -1,9 +1,90 @@
 <html>
-    <head>
-        <script src="../js/jquery.js"></script>
-        <script src="../js/init.js"></script>
-    </head>
-    <body>
-        Leavitt Engine Static Page TODO
-    </body>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <style>
+        .page-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            height: 90%;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Title</span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+                <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+                <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+                <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+                <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
+                <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="height: 96px;" onclick="location.href='#scroll-tab-6'" type="button">
+                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                    </button>
+                    <img class="page-content-img" src="/src/leavitt/static/engine-1.png">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="height: 96px;">
+                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                    </button>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <img class="page-content-img" src="/src/leavitt/static/engine-2.png">
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
 </html>
