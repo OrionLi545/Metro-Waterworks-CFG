@@ -24,6 +24,9 @@
         }
 
         .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
             height: 90%;
             width: auto;
         }
@@ -43,6 +46,16 @@
             color: black;
             text-shadow: 2px 2px 5px wheat;
         }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
     </style>
 </head>
 
@@ -54,7 +67,9 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Leavitt Engine Pictures</span>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='/menu.html'" type="button">
+                <button
+                    class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="location.href='/menu.html'" type="button">
                     Back to MENU
                 </button>
             </div>
@@ -73,73 +88,106 @@
             <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/engine-1.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- buttons here -->
+                        <img class="page-content-img" src="/src/leavitt/static/engine-1.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-2">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/engine-2.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <img class="page-content-img" src="/src/leavitt/static/engine-2.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-3">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/engine-3.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <img class="page-content-img" src="/src/leavitt/static/engine-3.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-4">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/engine-4.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <img class="page-content-img" src="/src/leavitt/static/engine-4.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>

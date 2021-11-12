@@ -24,6 +24,9 @@
         }
 
         .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
             height: 90%;
             width: auto;
         }
@@ -43,6 +46,16 @@
             color: black;
             text-shadow: 2px 2px 5px wheat;
         }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
     </style>
 </head>
 
@@ -54,7 +67,9 @@
                 <!-- Title -->
                 <span class="mdl-layout-title">Leavitt Pump Pictures</span>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="location.href='/menu.html'" type="button">
+                <button
+                    class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    onclick="location.href='/menu.html'" type="button">
                     Back to MENU
                 </button>
             </div>
@@ -71,37 +86,81 @@
             <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/pump-1.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position:relative">
+                        <!-- purple part below -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(57% 100%, 51% 100%, 32% 81%, 28% 88%, 16% 91%, 4% 78%, 18% 69%, 21% 62%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop1.html'" type="button"></button>
+                        <!-- yellow part middle -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(33% 25%, 54% 31%, 56% 55%, 68% 55%, 75% 61%, 81% 94%, 59% 100%, 21% 61%, 11% 71%, 16% 31%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop2.html'" type="button"></button>
+                        <!-- yellow part below -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(15% 91%, 26% 91%, 33% 81%, 51% 100%, 6% 100%, 8% 86%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop2.html'" type="button"></button>
+                        <!-- blue part above -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(27% 0, 45% 0, 52% 7%, 53% 25%, 38% 20%, 24% 21%, 26% 5%, 24% 2%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop3.html'" type="button"></button>
+                        <!-- blue part above left strip -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(21% 6%, 23% 4%, 21% 23%, 19% 24%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop3.html'" type="button"></button>
+                        <!-- blue part middle -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(68% 32%, 71% 36%, 72% 43%, 63% 40%, 59% 38%, 54% 40%, 54% 36%, 56% 31%, 62% 30%)"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop3.html'" type="button"></button>
+                        <!-- pink part above -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(22% 2%, 26% 5%, 23% 28%, 22% 31%, 18% 26%, 21% 25%, 22% 6%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/pop4.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/pump-1.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="scroll-tab-2">
                 <div class="page-content">
                     <!-- Your content goes here -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
-                        type="button">
-                        <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
-                    <img class="page-content-img" src="/src/leavitt/static/pump-2.png">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="height: 96px;"
-                        onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
-                        type="button">
-                        <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
-                    </button>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <img class="page-content-img" src="/src/leavitt/static/pump-2.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px;"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_white_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
