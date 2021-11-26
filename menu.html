@@ -1,125 +1,141 @@
 <html>
-    <head>
-        <script src="/js/jquery.js"></script>
-        <script src="/js/init.js"></script>
-        <style>
-            body{
-                margin: 0%;
-                background-color: white;
-            }
-            .img{
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: -1;
-                position: absolute;
-                opacity: 0.35;
-            }
-            .img img{
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
-            .outerContainer{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 100%;
-                height: 100%;
-            }
-            .flexContainer{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 85%;
-                height: 100%;
-            }
-            .flexItem{
-                background-color: lightskyblue;
-                width: 35%;
-                height: 25%;
-                border-radius: 15px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .flexItem-link{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 4em;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-                color: white;
-                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-            }
-            .flexItem-link:visited{
-                color: white;
-                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-                text-decoration: none;
-            }
-            .flexItem-link:hover{
-                color: white;
-                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-                text-decoration: none;
-            }
-            .flexItem-link:active{
-                color: yellow;
-                text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-                text-decoration: none;
-            }
-            .backButtonContainer{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 15%;
-                height: 100%;
-            }
-            .buttonItem{
-                background-color: lightgray;
-                width: 65%;
-                height: 25%;
-                border: 3%;
-                border-color: black;
-                border-radius: 15px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .buttonItem-text{
-                margin: 0;
-                font-size: 2.5em;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-                color: black;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="img">
-            <img src="/src/menu-bg.jpg">
-        </div>
-        <div class="outerContainer">
+
+<head>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <style>
+        body {
+            margin: 0%;
+            background-color: white;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+            position: absolute;
+            opacity: 0.35;
+        }
+
+        .img img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .outerContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flexContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 85%;
+            height: 100%;
+        }
+
+        .flexItem {
+            background-color: lightskyblue;
+            width: 35%;
+            height: 25%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flexItem-link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+        }
+
+        .flexItem-link:visited {
+            color: white;
+            text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+            text-decoration: none;
+        }
+
+        .flexItem-link:hover {
+            color: white;
+            text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+            text-decoration: none;
+        }
+
+        .flexItem-link:active {
+            color: yellow;
+            text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+            text-decoration: none;
+        }
+
+        .backButtonContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 15%;
+            height: 100%;
+        }
+
+        .buttonItem {
+            background-color: lightgray;
+            width: 65%;
+            height: 25%;
+            border: 3%;
+            border-color: black;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttonItem-text {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img src="/src/menu-bg.jpg">
+    </div>
+    <div class="outerContainer">
         <div class="flexContainer">
             <div class="flexItem" style="background: url(/src/menu/menu-leavitt-engine.jpg);background-size: cover;">
                 <a class="flexItem-link" href="/Leavitt/Leavitt-engine-static.html">
                     <p>Leavitt Engine</p>
                 </a>
             </div>
-            <div class="flexItem" style="background: url(/src/menu/menu-leavitt-pump.jpg);background-size: cover;background-position: center;">
+            <div class="flexItem"
+                style="background: url(/src/menu/menu-leavitt-pump.jpg);background-size: cover;background-position: center;">
                 <a class="flexItem-link" href="/Leavitt/Leavitt-pump-static.html">
                     <p>Leavitt Pumps</p>
                 </a>
             </div>
-            <div class="flexItem" style="background: url(/src/menu/menu-allis-engine.jpg);background-size: cover;background-position: center;">
+            <div class="flexItem"
+                style="background: url(/src/menu/menu-allis-engine.jpg);background-size: cover;background-position: center;">
                 <a class="flexItem-link" href="/Allis/Allis-engine-static.html">
                     <p>Allis Engine</p>
                 </a>
@@ -129,7 +145,8 @@
                     <p>Allis Pumps</p>
                 </a>
             </div>
-            <div class="flexItem" style="background: url(/src/menu/menu-worthington-engine.jpg);background-size: cover;">
+            <div class="flexItem"
+                style="background: url(/src/menu/menu-worthington-engine.jpg);background-size: cover;">
                 <a class="flexItem-link" href="/Worthington/Worthington-engine-static.html">
                     <p style="margin: 0;">Worthington</p>
                     <p style="margin: 0;">Engine</p>
@@ -149,6 +166,7 @@
                 <p class="buttonItem-text">MENU</p>
             </button>
         </div>
-        </div>
-    </body>
+    </div>
+</body>
+
 </html>
