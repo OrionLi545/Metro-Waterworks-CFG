@@ -1,6 +1,6 @@
 var lastTime = new Date().getTime();
 var currentTime = new Date().getTime();
-var timeOut = 60 * 1000; //Time limit to return to cover page: 60000ms
+var timeOut = 180 * 1000; //Time limit to return to cover page: 180000ms
 
 // var test = window.location.pathname;
 // alert(test);
