@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <script>
+        function activateTab(elementId) {
+            document.getElementById(elementId).classList.add("is-active")
+        }
+        function deactivateTab(elementId) {
+            document.getElementById(elementId).classList.remove("is-active")
+        }
+    </script>
+    <style>
+        .page-content {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 90%;
+            width: auto;
+        }
+
+        .reminder-header {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .reminder-header-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Allis Engine > Steam Inlet</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/Allis/Allis-engine-static.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
+                        BACK
+                    </button>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/index.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);">
+                        MAIN MENU
+                    </button>
+                </nav>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" id="scroll-tab-entry-1" class="mdl-layout__tab is-active">Picture 1</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="reminder-header">
+                <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
+                    detailed photos.</p>
+            </div>
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position:relative">
+                        <img class="page-content-img" src="/src/allis-static/allis-pop-up-images/steam-inlet-allis.jpeg">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
