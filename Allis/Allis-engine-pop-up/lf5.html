@@ -15,7 +15,7 @@
     </script>
     <style>
         .page-content {
-            height: 90%;
+            height: 100%;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -57,6 +57,38 @@
             position: absolute;
             background-color: transparent;
         }
+
+        .text-image-wrapper{
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper-text{
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 10%;
+            padding: 5%;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: lightgrey;
+        }
+
+        .image-wrapper{
+            height: 100%;
+            width: 70%;
+        }
     </style>
 </head>
 
@@ -94,6 +126,13 @@
                 <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
                     detailed photos.</p>
             </div>
+            <div class="text-image-wrapper">
+                <div class="text-wrapper">
+                    <p class="text-wrapper-text">
+                        The dash pots act as shock absorbers or pressure dampeners as the valves open and close to let steam in and out of the chambers above.                
+                    </p>
+                </div>
+                <div class="image-wrapper">
             <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
                 <div class="page-content">
                     <!-- Your content goes here -->
