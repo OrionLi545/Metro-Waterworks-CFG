@@ -15,7 +15,7 @@
     </script>
     <style>
         .page-content {
-            height: 90%;
+            height: 100%;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -57,6 +57,38 @@
             position: absolute;
             background-color: transparent;
         }
+
+        .text-image-wrapper {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper {
+            height: 100%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 10%;
+            padding: 5%;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: lightgrey;
+        }
+
+        .image-wrapper {
+            height: 100%;
+            width: 70%;
+        }
     </style>
 </head>
 
@@ -66,12 +98,12 @@
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">Leavitt Pump Pictures > Rocker Arm</span>
+                <span class="mdl-layout-title">Leavitt Engine Pictures > Flyball Governor </span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
                     <button
                         class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        onclick="location.href='/Leavitt/Leavitt-pump-static.html'" type="button"
+                        onclick="location.href='/Leavitt/Leavitt-engine-static.html'" type="button"
                         style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
                         BACK
                     </button>
@@ -89,34 +121,23 @@
             </div>
         </header>
         <main class="mdl-layout__content">
-            <div class="reminder-header">
-                <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
-                    detailed photos.</p>
-            </div>
-            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-                <div class="page-content">
-                    <!-- Your content goes here -->
-                    <div>
-                        <button
-                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
-                            type="button">
-                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
-                        </button>
-                    </div>
-                    <div style="position:relative">
-                        <img class="page-content-img" src="/src/leavitt/pop-up/pop-5-1.jpeg">
-                    </div>
-                    <div>
-                        <button
-                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
-                            type="button">
-                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
-                        </button>
-                    </div>
+            <div class="text-image-wrapper">
+                <div class="text-wrapper">
+                    <p class="text-wrapper-text">
+                        Controls the amount of steam coming into the engine, thereby increasing or slowing the engine's speed. As the steam enters and builds up inside the engine, the governor begins to spin and centrifugal force sends the brass balls flying outwards. As this motion occurs, it closes a valve which cuts off the steam entering the engine and the machine slows down. With the slower speed, gravity pulls the weights back down, re-opening the valves and allowing the steam to build up again. The process repeats over and over, continually controlling, or "governing," the speed of the engine to insure efficiency.   
+                    </p>
                 </div>
-            </section>
+                <div class="image-wrapper">
+                    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                        <div class="page-content">
+                            <!-- your content goes here -->
+                            <div style="position:relative">
+                                <img class="page-content-img" src="/src/leavitt/pop-up/Governor Pop Up - Leavitt.jpeg">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </main>
     </div>
 </body>
