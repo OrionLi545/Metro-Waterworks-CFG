@@ -10,7 +10,6 @@ $(function () {
         lastTime = new Date().getTime();
     });
 })
-//一分钟超时自动跳转指定页面
 function toSearchPage() {
     currentTime = new Date().getTime(); 
     if (currentTime - lastTime > timeOut) { 
