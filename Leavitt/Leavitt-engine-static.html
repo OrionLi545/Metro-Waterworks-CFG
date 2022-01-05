@@ -1,0 +1,435 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <script>
+        function activateTab(elementId) {
+            document.getElementById(elementId).classList.add("is-active")
+        }
+        function deactivateTab(elementId) {
+            document.getElementById(elementId).classList.remove("is-active")
+        }
+        function activateVideo(elementId) {
+            var x = document.getElementById(elementId);
+            x.style.display = "flex";
+            player.seekTo(0, true);
+            player.playVideo();
+        }
+        function deactivateVideo(elementId) {
+            var x = document.getElementById(elementId);
+            x.style.display = "none";
+            player.pauseVideo();
+        }
+    </script>
+    <style>
+        .page-content {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 90%;
+            width: auto;
+        }
+
+        .reminder-header {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .reminder-header-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+
+        .playerContainer {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.65);
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .playerButton {
+            position: absolute;
+            margin-left: 5%;
+            margin-top: 10%;
+            height: 72px;
+            width: 72px;
+            display: flex;
+            justify-content: center;
+            z-index: 99;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '70%',
+                width: '70%',
+                videoId: 'anaTpbORpvs',
+                playerVars: { 'autoplay': 0 },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == 0) {
+                event.target.seekTo(0, true);
+            }
+        }
+    </script>
+
+    <div class="playerContainer" id="playerContainer">
+        <div id="player">
+
+        </div>
+        <div>
+            <button
+                class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onclick="deactivateVideo('playerContainer');" type="button"
+                style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);font-size: 1.5em;">
+                BACK
+            </button>
+        </div>
+    </div>
+
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent playerButton"
+        style="background-color: lightgrey;border: 2px solid rgb(0, 0, 0);" onclick="activateVideo('playerContainer');"
+        type="button">
+        <img src="/src/icon/play_circle_black_24dp.svg" style="height: 48px;width: 48px;">
+    </button>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Leavitt Engine Pictures</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/menu.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
+                        BACK
+                    </button>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/index.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);">
+                        MAIN MENU
+                    </button>
+                </nav>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" id="scroll-tab-entry-1" class="mdl-layout__tab is-active">Picture 1</a>
+                <a href="#scroll-tab-2" id="scroll-tab-entry-2" class="mdl-layout__tab">Picture 2</a>
+                <a href="#scroll-tab-3" id="scroll-tab-entry-3" class="mdl-layout__tab">Picture 3</a>
+                <a href="#scroll-tab-4" id="scroll-tab-entry-4" class="mdl-layout__tab">Picture 4</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="reminder-header">
+                <p class="reminder-header-text">Tap on the outlined parts in the image below to learn more about their
+                    functions.</p>
+                <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
+                    interactive photos.</p>
+            </div>
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- buttons here -->
+                        <!-- Red left (condenser)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(0% 26%, 3% 23%, 9% 22%, 15% 17%, 22% 17%, 29% 24%, 25% 29%, 29% 34%, 29% 41%, 24% 46%, 17% 47%, 11% 48%, 6% 49%, 2% 46%, 0 42%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop1.html'"
+                            type="button"></button>
+                        <!-- Purple upper left (oil dispensing pipes) -->
+                        <button class="polygon-button-image" style="clip-path: polygon(34% 0, 40% 0, 39% 37%, 35% 30%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop2.html'"
+                            type="button"></button>
+                        <!-- Pink mid (flywheel)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(78% 27%, 78% 35%, 72% 45%, 71% 54%, 69% 62%, 65% 62%, 65% 52%, 67% 43%, 70% 34%, 73% 30%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop3.html'"
+                            type="button"></button>
+                        <!-- Yellow (lower half) (piston rod)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(54% 100%, 57% 94%, 61% 92%, 69% 74%, 74% 58%, 75% 54%, 77% 47%, 81% 45%, 82% 48%, 80% 54%, 80% 60%, 77% 67%, 72% 79%, 67% 90%, 65% 96%, 65% 100%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop4.html'"
+                            type="button"></button>
+                        <!-- Yellow upper half (piston rod)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(94% 8%, 90% 10%, 90% 20%, 91% 37%, 95% 40%, 94% 18%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop4.html'"
+                            type="button"></button>
+                        <!-- Blue right (rocker arm)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(90% 38%, 86% 38%, 80% 53%, 85% 65%, 89% 73%, 98% 67%, 97% 53%, 92% 50%, 89% 44%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop5.html'"
+                            type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/engine-1-UPDATED.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- Buttons here -->
+                        <!-- Yellow left (steam inlet)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(12% 27%, 16% 29%, 19% 32%, 19% 38%, 16% 41%, 12% 44%, 9% 42%, 5% 35%, 5% 31%, 8% 29%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop6.html'"
+                            type="button"></button>
+                        <!-- Purple gray left (governor)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(20% 49%, 24% 50%, 26% 53%, 27% 59%, 26% 64%, 23% 65%, 20% 63%, 21% 57%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop7.html'"
+                            type="button"></button>
+                        <!-- Green middle (steam chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(37% 57%, 35% 57%, 35% 59%, 35% 62%, 30% 63%, 25% 61%, 26% 56%, 24% 51%, 24% 44%, 29% 41%, 33% 42%, 37% 44%, 37% 50%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop8.html'"
+                            type="button"></button>
+                        <!-- Red (left one) (oil dispenser)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(34% 55%, 41% 57%, 41% 62%, 34% 61%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop2.html'"
+                            type="button"></button>
+                        <!-- Red (right one) (oil dispenser)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(61% 62%, 67% 62%, 67% 68%, 61% 68%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop2.html'"
+                            type="button"></button>
+                        <!-- Blue (middle one) (reheater)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(49% 47%, 54% 43%, 59% 44%, 62% 50%, 62% 59%, 58% 62%, 55% 64%, 51% 63%, 48% 59%, 47% 54%, 47% 49%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop9.html'"
+                            type="button"></button>
+                        <!-- Blue (right one) (reheater)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(72% 55%, 78% 51%, 83% 51%, 86% 56%, 87% 64%, 85% 69%, 81% 71%, 77% 71%, 74% 67%, 73% 62%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop9.html'"
+                            type="button"></button>
+                        <!-- Pink (oil reservoir)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 31%, 50% 38%, 54% 41%, 55% 39%, 61% 41%, 62% 39%, 61% 31%, 54% 28%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop10.html'"
+                            type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/engine-2-UPDATED.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- Buttons here -->
+                        <!-- Teal left (flywheel)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(14% 35%, 23% 31%, 32% 32%, 37% 41%, 40% 53%, 33% 53%, 26% 79%, 0 88%, 0 70%, 6% 48%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop3.html'"
+                            type="button"></button>
+                        <!-- Red middle (bearings)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 68%, 46% 71%, 46% 81%, 51% 80%, 51% 75%, 53% 73%, 51% 70%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop11.html'"
+                            type="button"></button>
+                        <!-- Green middle (crank, crankshaft, connecting rod)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(56% 74%, 51% 74%, 50% 84%, 55% 85%, 59% 84%, 61% 81%, 62% 74%, 59% 74%, 60% 67%, 61% 63%, 58% 62%, 57% 69%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop12.html'"
+                            type="button"></button>
+                        <!-- Green (to left of pink) (crank, crankshaft, connecting rod)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(72% 78%, 73% 78%, 73% 81%, 74% 85%, 71% 85%, 68% 81%, 69% 77%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop12.html'"
+                            type="button"></button>
+                        <!-- Green (right) (crank, crankshaft, connecting rod)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(87% 77%, 96% 78%, 97% 82%, 96% 85%, 92% 85%, 88% 85%, 88% 81%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop12.html'"
+                            type="button"></button>
+                        <!-- Pink right (manual jacking gear/ship's wheel)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(77% 53%, 74% 53%, 75% 65%, 70% 67%, 71% 72%, 73% 75%, 73% 79%, 74% 85%, 88% 86%, 87% 80%, 86% 74%, 85% 70%, 83% 67%, 80% 66%, 78% 64%, 78% 57%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop13.html'"
+                            type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/engine-3-UPDATED.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- Buttons here -->
+                        <!-- yellow left (reheater)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(25% 46%, 29% 47%, 33% 50%, 33% 55%, 30% 62%, 26% 63%, 21% 61%, 20% 57%, 21% 52%, 23% 49%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop9.html'"
+                            type="button"></button>
+                        <!-- yellow middle (reheater)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(44% 41%, 49% 39%, 53% 41%, 56% 46%, 55% 50%, 54% 53%, 50% 57%, 46% 54%, 46% 50%, 43% 47%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop9.html'"
+                            type="button"></button>
+                        <!-- Blue mid (left part) (ship's wheel/manual jacking gear)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(34% 54%, 36% 52%, 34% 61%, 32% 61%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop13.html'"
+                            type="button"></button>
+                        <!-- Blue mid (right part) (ship's wheel/manual jacking gear)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(39% 48%, 42% 46%, 45% 49%, 46% 52%, 46% 57%, 44% 58%, 38% 59%, 39% 53%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop13.html'"
+                            type="button"></button>
+                        <!-- Red middle (gauges)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(34% 61%, 38% 62%, 39% 56%, 39% 48%, 36% 48%, 35% 52%, 34% 58%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop14.html'"
+                            type="button"></button>
+                        <!-- Green (oil reservoir)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(41% 32%, 48% 29%, 51% 33%, 41% 37%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop10.html'"
+                            type="button"></button>
+                        <!-- Orange (steam chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(63% 41%, 63% 52%, 73% 51%, 73% 39%, 67% 37%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop8.html'"
+                            type="button"></button>
+                        <!-- Pink (steam inlet)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(80% 30%, 79% 33%, 79% 37%, 83% 40%, 87% 39%, 90% 36%, 92% 32%, 91% 28%, 88% 27%, 85% 26%, 82% 28%);"
+                            onclick="location.href='/Leavitt/Leavitt-engine-pop-up/Leavitt-engine-pop6.html'"
+                            type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/engine-4-UPDATED.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

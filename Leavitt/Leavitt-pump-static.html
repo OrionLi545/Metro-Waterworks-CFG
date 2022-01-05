@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <script>
+        function activateTab(elementId) {
+            document.getElementById(elementId).classList.add("is-active")
+        }
+        function deactivateTab(elementId) {
+            document.getElementById(elementId).classList.remove("is-active")
+        }
+    </script>
+    <style>
+        .page-content {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 90%;
+            width: auto;
+        }
+
+        .reminder-header {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .reminder-header-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Leavitt Pump Pictures</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/menu.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
+                        BACK
+                    </button>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/index.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);">
+                        MAIN MENU
+                    </button>
+                </nav>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" id="scroll-tab-entry-1" class="mdl-layout__tab is-active">Picture 1</a>
+                <a href="#scroll-tab-2" id="scroll-tab-entry-2" class="mdl-layout__tab">Picture 2</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="reminder-header">
+                <p class="reminder-header-text">Tap on the outlined parts in the image below to learn more about their
+                    functions.</p>
+                <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
+                    interactive photos.</p>
+            </div>
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position:relative">
+                        <!-- purple part below (pump valve)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(57% 100%, 51% 100%, 32% 81%, 28% 88%, 16% 91%, 4% 78%, 18% 69%, 21% 62%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop1.html'" type="button"></button>
+                        <!-- yellow part middle (water discharge pump chamber) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(33% 25%, 54% 31%, 56% 55%, 68% 55%, 75% 61%, 81% 94%, 59% 100%, 21% 61%, 11% 71%, 16% 31%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop2.html'" type="button"></button>
+                        <!-- yellow part below (water discharge pump chamber) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(15% 91%, 26% 91%, 33% 81%, 51% 100%, 6% 100%, 8% 86%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop2.html'" type="button"></button>
+                        <!-- blue part above (air chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(27% 0, 45% 0, 52% 7%, 53% 25%, 38% 20%, 24% 21%, 26% 5%, 24% 2%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop3.html'" type="button"></button>
+                        <!-- blue part above left strip (air chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(21% 6%, 23% 4%, 21% 23%, 19% 24%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop3.html'" type="button"></button>
+                        <!-- blue part middle (air chamber) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(68% 32%, 71% 36%, 72% 43%, 63% 40%, 59% 38%, 54% 40%, 54% 36%, 56% 31%, 62% 30%)"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop3.html'" type="button"></button>
+                        <!-- pink part above (sight gauge) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(22% 2%, 26% 5%, 23% 28%, 22% 31%, 18% 26%, 21% 25%, 22% 6%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop4.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/pump-1.png">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- Light blue lower right (rocker arm)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(100% 55%, 95% 61%, 100% 70%, 100% 81%, 86% 69%, 80% 65%, 80% 59%, 85% 54%, 100% 44%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop5.html'" type="button"></button>
+                        <!-- Pink lower (piston rod) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(81% 60%, 80% 65%, 83% 70%, 80% 70%, 51% 94%, 43% 94%, 46% 91%, 49% 90%, 77% 65%, 78% 61%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop6.html'" type="button"></button>
+                        <!-- Green left (water suction pump chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(35% 37%, 35% 42%, 41% 42%, 44% 44%, 45% 68%, 24% 67%, 22% 68%, 17% 68%, 17% 35%, 26% 34%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop2.html'" type="button"></button>
+                        <!-- Yellow upper left (left part) (air chamber) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(30% 0, 34% 7%, 34% 25%, 36% 37%, 22% 33%, 17% 34%, 16% 32%, 17% 8%, 18% 3%, 22% 0);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop3.html'" type="button"></button>
+                        <!-- Yellow upper left (right part)(air chamber)-->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(42% 19%, 44% 24%, 44% 41%, 39% 41%, 35% 41%, 35% 37%, 34% 34%, 33% 29%, 34% 19%, 38% 17%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop3.html'" type="button"></button>
+                        <!-- Red middle (condenser) -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(59% 31%, 68% 34%, 70% 48%, 63% 55%, 62% 46%, 61% 38%, 57% 39%, 56% 51%, 54% 49%, 54% 36%);"
+                            onclick="location.href='/Leavitt/Leavitt-pump-pop-up/Leavitt-pump-pop7.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/leavitt/static/pump-2.png">
+
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

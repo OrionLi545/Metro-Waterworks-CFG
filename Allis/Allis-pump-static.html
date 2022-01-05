@@ -1,0 +1,294 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <script>
+        function activateTab(elementId) {
+            document.getElementById(elementId).classList.add("is-active")
+        }
+        function deactivateTab(elementId) {
+            document.getElementById(elementId).classList.remove("is-active")
+        }
+    </script>
+    <style>
+        .page-content {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 90%;
+            width: auto;
+        }
+
+        .reminder-header {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .reminder-header-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Allis Pump Pictures</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/menu.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
+                        BACK
+                    </button>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/index.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);">
+                        MAIN MENU
+                    </button>
+                </nav>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" id="scroll-tab-entry-1" class="mdl-layout__tab is-active">Picture 1</a>
+                <a href="#scroll-tab-2" id="scroll-tab-entry-2" class="mdl-layout__tab">Picture 2</a>
+                <a href="#scroll-tab-3" id="scroll-tab-entry-3" class="mdl-layout__tab">Picture 3</a>
+                <a href="#scroll-tab-4" id="scroll-tab-entry-4" class="mdl-layout__tab">Picture 4</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="reminder-header">
+                <p class="reminder-header-text">Tap on the outlined parts in the image below to learn more about their
+                    functions.</p>
+                <p class="reminder-header-text">Use the Left and Right Arrows to move through our collection of
+                    interactive photos.</p>
+            </div>
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- buttons here -->
+                        <!-- orange left -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(31% 0, 29% 24%, 20% 49%, 5% 53%, 0 44%, 0 0);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-1.html'" type="button"></button>
+                        <!-- orange right -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(75% 5%, 85% 10%, 74% 32%, 69% 34%, 70% 18%, 73% 13%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-1.html'" type="button"></button>
+                        <!-- blue left -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(71% 0, 70% 19%, 70% 33%, 72% 44%, 57% 45%, 35% 44%, 35% 0);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-2.html'" type="button"></button>
+                        <!-- blue right -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(84% 8%, 100% 11%, 100% 38%, 86% 39%, 73% 37%, 74% 31%, 79% 22%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-2.html'" type="button"></button>
+                        <!-- green left -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(59% 45%, 72% 43%, 74% 38%, 100% 39%, 76% 50%, 74% 75%, 100% 74%, 100% 100%, 41% 100%, 42% 44%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-3.html'" type="button"></button>
+                        <!-- green right -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(100% 40%, 82% 40%, 82% 48%, 80% 74%, 94% 96%, 100% 56%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-3.html'" type="button"></button>
+                        <!-- yellow -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(76% 51%, 82% 51%, 78% 75%, 75% 76%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-4.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/allis-static/pump-1.jpg">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-1');deactivateTab('scroll-tab-1');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- purple -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(27% 46%, 29% 58%, 25% 75%, 0 78%, 0% 35%, 25% 38%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-1.html'" type="button"></button>
+                        <!-- red -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 44%, 51% 70%, 31% 71%, 26% 72%, 29% 58%, 27% 45%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-2.html'" type="button"></button>
+                        <!-- pink -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 38%, 58% 33%, 72% 31%, 79% 100%, 48% 100%, 48% 75%, 51% 69%, 51% 60%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-3.html'" type="button"></button>
+                        <!-- blue -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(49% 0, 70% 0, 73% 31%, 59% 33%, 51% 37%, 50% 42%, 48% 36%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-2.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/allis-static/pump-2.jpg">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-2');deactivateTab('scroll-tab-2');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-2');activateTab('scroll-tab-2');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- red -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(47% 17%, 75% 27%, 100% 34%, 100% 59%, 68% 52%, 34% 49%, 13% 49%, 0 42%, 0 0, 23% 0);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-2.html'" type="button"></button>
+                        <!-- red -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(47% 17%, 75% 27%, 100% 34%, 100% 59%, 68% 52%, 34% 49%, 13% 49%, 0 42%, 0 0, 23% 0);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-2.html'" type="button"></button>
+                        <!-- blue -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 0, 68% 0, 92% 15%, 92% 31%, 81% 29%, 78% 27%, 68% 26%, 50% 19%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-2.html'" type="button"></button>
+                        <!-- pink left -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(12% 53%, 22% 54%, 23% 64%, 23% 69%, 20% 100%, 0 100%, 0 42%, 9% 44%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-3.html'" type="button"></button>
+                        <!-- pink right -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(50% 49%, 69% 52%, 72% 55%, 94% 57%, 96% 85%, 55% 96%, 46% 68%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-3.html'" type="button"></button>
+                        <!-- green -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(35% 68%, 26% 69%, 23% 66%, 24% 61%, 24% 49%, 35% 49%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-3.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/allis-static/pump-3.jpg">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-4');activateTab('scroll-tab-4');deactivateTab('scroll-tab-entry-3');deactivateTab('scroll-tab-3');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-3');activateTab('scroll-tab-3');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_back_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                    <div style="position: relative;">
+                        <!-- green -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(25% 58%, 18% 64%, 3% 65%, 16% 73%, 20% 77%, 19% 100%, 0 100%, 0 30%, 20% 37%, 27% 50%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump4-1.html'" type="button"></button>
+                        <!-- blue -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(19% 9%, 66% 0, 100% 0, 100% 25%, 72% 29%, 68% 35%, 69% 49%, 64% 49%, 57% 36%, 17% 36%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump1-2.html'" type="button"></button>
+                        <!-- purple -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(58% 37%, 60% 47%, 66% 48%, 67% 63%, 78% 64%, 78% 100%, 19% 100%, 19% 65%, 28% 51%, 18% 35%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-3.html'" type="button"></button>
+                        <!-- red -->
+                        <button class="polygon-button-image"
+                            style="clip-path: polygon(68% 34%, 83% 26%, 100% 27%, 100% 70%, 79% 72%, 79% 63%, 65% 64%, 69% 55%, 65% 49%, 73% 48%);"
+                            onclick="location.href='/Allis/Allis-engine-pop-up/pump2-2.html'" type="button"></button>
+                        <img class="page-content-img" src="/src/allis-static/pump-4.jpg">
+                    </div>
+                    <div>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                            style="height: 96px; background-color: lightgrey;border: 2px solid rgb(0, 0, 0);"
+                            onclick="activateTab('scroll-tab-entry-1');activateTab('scroll-tab-1');deactivateTab('scroll-tab-entry-4');deactivateTab('scroll-tab-4');"
+                            type="button">
+                            <img src="/src/icon/arrow_forward_ios_black_24dp.svg" style="height: 72px;width: 72px;">
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

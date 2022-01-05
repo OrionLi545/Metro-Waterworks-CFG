@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/js/mdl/material-indigo-pink.min.css">
+    <script src="/js/mdl/material.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/init.js"></script>
+    <script>
+        function activateTab(elementId) {
+            document.getElementById(elementId).classList.add("is-active")
+        }
+        function deactivateTab(elementId) {
+            document.getElementById(elementId).classList.remove("is-active")
+        }
+    </script>
+    <style>
+        .page-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .page-content-img {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 90%;
+            width: auto;
+        }
+
+        .reminder-header {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .reminder-header-text {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+        }
+
+        .polygon-button-image {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+
+        .text-image-wrapper{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-wrapper-text{
+            font-size: 1.9em;
+            line-height: 1.3;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 10%;
+            padding: 5%;
+            border: 2px solid rgb(0, 0, 0);
+            background-color: lightgrey;
+        }
+
+        .image-wrapper{
+            height: 100%;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Allis Engine > Reheater</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/Allis/Allis-engine-static.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);margin-right: 15px;">
+                        BACK
+                    </button>
+                    <button
+                        class="mdl-button mdl-js-button mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        onclick="location.href='/index.html'" type="button"
+                        style="background-color: lightgrey;color: black;border: 2px solid rgb(0, 0, 0);">
+                        MAIN MENU
+                    </button>
+                </nav>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" id="scroll-tab-entry-1" class="mdl-layout__tab is-active">Picture 1</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="text-image-wrapper">
+                <div class="text-wrapper">
+                    <p class="text-wrapper-text">
+                        <b>Reheater</b><br>As the steam exerts its force over the piston rod in each steam chamber, it begins to cool off and condense. To combat this, a reheater is added between each steam chamber to maintain temperature before it is used again. The walnut wood cladding is a decorative cover over the asbestos-shrouded steam jacket surrounding each cylinder head and is intended to minimize heat loss.
+                    </p>
+                </div>
+                <div class="image-wrapper">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div style="position:relative">
+                        <img class="page-content-img" src="/src/allis-static/allis-pop-up-images/reheater.jpeg">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
